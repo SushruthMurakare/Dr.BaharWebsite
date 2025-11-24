@@ -1,0 +1,92 @@
+body {
+  background-color: #d3d3d3;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.overview {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+#postsContainer {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.post-card {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 200px;
+  max-width: 500px;
+  flex-shrink: 0;
+  height: 600px;
+ 
+}
+
+.post-card img {
+  width: 100%;
+  border-radius: 5px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.post-card p {
+    text-overflow: ellipsis;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.headerImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.headerImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.headerNameTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerNameTitle h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.headerNameTitle h5 {
+  margin: 0;
+  font-size: 14px;
+  color: gray;
+}
+
+.post-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 200px;
+  max-width: 500px;
+  flex-shrink: 0;
+}
