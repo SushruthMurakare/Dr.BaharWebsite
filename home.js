@@ -17,7 +17,7 @@ fetch("home.json")
       link.className = "post-link";
 
       const header = document.createElement("div");
-      header.className = "header";
+      header.className = "post-header";
 
       const headerImg = document.createElement("div");
       headerImg.className = "headerImg";
