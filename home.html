@@ -6,6 +6,7 @@
     <title>Dr. Iris Bahar - Home</title>
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="sidebar.css" />
+    <link rel="stylesheet" href="publications.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
@@ -85,18 +86,64 @@
     <!-- Main Content Area -->
     <main class="main-content">
       <div>
-        <div class="overview">
-          <h1 id="name"></h1>
-          <h3 id="title"></h3>
-          <p id="desc"></p>
-        </div>
-        <div class="overview">
-          <h1>Activity</h1>
-          <div id="postsContainer"></div>
-        </div>
+        <section id="home" class="content-section">
+            <div class="content-card">
+                <h1 id="name"></h1>
+                <h3 id="title"></h3>
+                <p id="desc"></p>
+            </div>
+
+            <div class="overview">
+                <h2>Activity</h2>
+                <div id="postsContainer"></div>
+            </div>
+        </section>
+
+        <section id="research" class="content-section">
+            <div class="content-card">
+                <h2>Research</h2>
+                <p>content here</p>
+            </div>
+        </section>
+
+        <section id="publications" class="content-section">
+            <div class="content-card">
+                <h2>Publications</h2>
+
+                <div id="pub-filterbar" class="pub-filterbar" role="tablist" aria-label="Publication filters">
+                </div>
+
+                <div id="pub-list" class="pub-list" aria-live="polite"></div>
+
+                <nav id="pub-pagination" class="pub-pagination" aria-label="Publications pagination"></nav>
+            </div>
+        </section>
+
+        <section id="students" class="content-section">
+            <div class="content-card">
+                <h2>Students</h2>
+                <p>content here</p>
+            </div>
+        </section>
+
+        <section id="teaching" class="content-section">
+            <div class="content-card">
+                <h2>Teaching</h2>
+                <p>content here</p>
+            </div>
+        </section>
+
+        <section id="appointment" class="content-section">
+            <div class="content-card">
+                <h2>Appointment</h2>
+                <p>content here</p>
+            </div>
+        </section>
+
       </div>
     </main>
 
     <script src="home.js"></script>
+    <script src="publications.js"></script>
   </body>
 </html>
