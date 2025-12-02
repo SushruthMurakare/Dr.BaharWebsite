@@ -150,14 +150,16 @@ body {
 /* --------------------- Styling for everything on a white content card --------------------- */
 .content-section {
   padding: 24px 32px;
-  scroll-margin-top: 90px; 
+  scroll-margin-top: 90px;
 }
 
 .content-card {
+  position: relative;
+  overflow: hidden;
   background-color: white;
   border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   padding: 24px 28px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   margin-bottom: 24px;
 }
 
@@ -167,13 +169,97 @@ body {
 }
 
 .content-card h2 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  color: var(--card-dark);
+  font-weight: 600;
+}
+
+.content-card h3 {
+  font-size: 1.2rem;
   color: var(--card-dark);
   font-weight: 600;
 }
 
 .content-card p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: var(--text-dark);
+}
+
+.content-card li {
+  margin-left: 1rem;
+}
+
+.content-card li i {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Card rows and columns */
+.card-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.text-column {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.image-column {
+  flex: 0 0 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-column img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  align-self: flex-end;
+  margin-top: 1.8rem;
+  display: block;
+  padding-right: 5rem;
+}
+
+.image-column video {
+  margin-right: 3rem;
+}
+
+
+/* ----------------- Carousel specific ----------------- */
+#teaching-card .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+#teaching-card .carousel-inner-wrapper {
+  overflow: hidden;
+}
+
+#teaching-card .slide-content {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Dots */
+#teaching-card .carousel-dots {
+  text-align: center;
+  margin-top: 12px;
+}
+
+#teaching-card .carousel-dots .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#teaching-card .carousel-dots .dot.active {
+  background-color: var(--primary-color);
 }
