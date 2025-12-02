@@ -15,7 +15,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, sans-serif;
-  background-color: var(--bg-light);
+  background-color: #fcecec;
   color: var(--text-dark);
 
 }
