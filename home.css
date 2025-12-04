@@ -15,7 +15,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, sans-serif;
-  background-color: #fcecec;
+  background-color: #f5f5f5;
   color: var(--text-dark);
 
 }
@@ -210,7 +210,7 @@ body {
 }
 
 .image-column {
-  flex: 0 0 350px;
+  flex: 0 0 400px;
   display: flex;
   flex-direction: column;
 }
@@ -220,9 +220,13 @@ body {
   height: auto;
   object-fit: contain;
   align-self: flex-end;
-  margin-top: 1.8rem;
+  margin-top: 3.5rem;
   display: block;
-  padding-right: 5rem;
+  padding-right: 3rem;
+}
+
+.vertical {
+  max-width: 80% !important;
 }
 
 .image-column video {
