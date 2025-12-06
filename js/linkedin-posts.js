@@ -3,7 +3,7 @@
  */
 async function loadLinkedInPosts() {
   try {
-    const response = await fetch('linkedin-posts.json');
+    const response = await fetch('./data/linkedin-posts.json');
     const postIds = await response.json();
 
     const container = document.getElementById('linkedin-posts-container');

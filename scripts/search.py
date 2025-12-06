@@ -23,7 +23,7 @@ def safe_get(obj, *keys):
             return None
     return obj
 
-def load_existing_json(path="cleaned_works.json"):
+def load_existing_json(path="./data/cleaned_works.json"):
     if Path(path).exists():
         with open(path, "r") as f:
             return json.load(f)
@@ -47,7 +47,7 @@ for group in works_groups:
 
 print(f"Found {len(putcodes)} put-codes in record (groups: {len(works_groups)})")
 
-# --------------------- Fetch pubs using ORCID API --------------------- 
+# --------------------- Fetch pubs using ORCID API ---------------------
 cleaned = []
 pause_between = 0.05
 
@@ -67,7 +67,7 @@ for i, putcode in enumerate(putcodes, start=1):
     day   = safe_get(detail, "publication-date", "day", "value")
     date_str = "-".join(str(x) for x in [year, month, day] if x)
 
-    # --------------------- Safe link creation logic --------------------- 
+    # --------------------- Safe link creation logic ---------------------
     doi = None
     url = None
     wosuid = None
@@ -89,7 +89,7 @@ for i, putcode in enumerate(putcodes, start=1):
 
     urls = safe_get(detail, "url") or safe_get(detail, "urls", "url") or []
 
-    if isinstance(urls, dict):  
+    if isinstance(urls, dict):
         urls = [urls]
 
     link = None
@@ -148,7 +148,7 @@ for i, putcode in enumerate(putcodes, start=1):
     if pause_between:
         time.sleep(pause_between)
 
-# --------------------- Compare with existing JSON and save --------------------- 
+# --------------------- Compare with existing JSON and save ---------------------
 existing = load_existing_json()
 
 if existing == cleaned:
@@ -162,7 +162,7 @@ else:
         print("Aborting. JSON not updated.")
         sys.exit(0)
 
-with open("cleaned_works.json", "w") as f:
+with open("./data/cleaned_works.json", "w") as f:
     json.dump(cleaned, f, indent=2)
 
 print(f"Saved {len(cleaned)} cleaned works to cleaned_works.json")

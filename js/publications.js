@@ -15,7 +15,7 @@ const samplePublications = [
 
 const pageSize = 10;
 let pubListEl, pubPaginationEl, pubFilterbarEl;
-let publicationsData = [];  
+let publicationsData = [];
 let currentFilter = 'all';
 let currentPage = 1;
 
@@ -157,7 +157,7 @@ function renderPublicationItem(pub) {
   authors.textContent = pub.authors || '';
   item.appendChild(authors);
 
-  // Title 
+  // Title
   const title = document.createElement('div');
   title.className = 'pub-title';
   title.textContent = `“${pub.title || 'Untitled'}”`;
@@ -297,7 +297,7 @@ function update() {
 }
 
 /* ---------- Load data from cleaned_works.json ---------- */
-function loadPublicationsFromFile(path = './cleaned_works.json') {
+function loadPublicationsFromFile(path = './data/cleaned_works.json') {
   return fetch(path)
     .then(resp => {
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Try to load from cleaned_works.json, else fallback
-  loadPublicationsFromFile('cleaned_works.json')
+  loadPublicationsFromFile('./data/cleaned_works.json')
     .catch(() => {
       publicationsData = (window.publicationsDataGlobal && Array.isArray(window.publicationsDataGlobal))
         ? window.publicationsDataGlobal.map(normalizeWork)

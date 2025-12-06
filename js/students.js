@@ -1,4 +1,4 @@
-fetch("students.json")
+fetch("./data/students.json")
   .then((res) => res.json())
   .then((data) => {
     const studentsContainer = document.querySelector(".students-container");
@@ -61,7 +61,7 @@ fetch("students.json")
 
       pastStudentCard.appendChild(pastStudentName);
       pastStudentCard.appendChild(graduation);
-      
+
 
       let description;
       if(pastStudent?.co_advised_with) {
@@ -71,7 +71,7 @@ fetch("students.json")
       }
 
      // studentCard.appendChild(pastStudentImg);
-      
+
 
       pastStudentsContainer.appendChild(pastStudentCard);
     });

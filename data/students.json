@@ -5,21 +5,21 @@
       "graduation": "Spring 2028",
       "program": "PhD Student in Computer Science",
       "about": "My research is on computer architecture simulation in which I work on an efficient secure memory implementation for a trusted execution environment.",
-      "image": "./students/WillBuziak.jpg"
+      "image": "./assets/students/WillBuziak.jpg"
     },
     {
       "name": "Student 1",
       "graduation": "Dec 2026",
       "program": "PhD Student in Computer Science",
       "about": "Working on autonomous navigation systems for mobile robots using computer vision and reinforcement learning techniques.",
-      "image": "./students/student2.jpg"
+      "image": "./assets/students/student2.jpg"
     },
     {
       "name": "Student 1",
       "graduation": "Dec 2026",
       "program": "PhD Student in Computer Science",
       "about": "Working on autonomous navigation systems for mobile robots using computer vision and reinforcement learning techniques.",
-      "image": "./students/student3.jpg"
+      "image": "./assets/students/student3.jpg"
     }
   ],
   "pastStudents": [

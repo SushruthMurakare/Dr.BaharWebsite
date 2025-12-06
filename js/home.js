@@ -1,4 +1,4 @@
-fetch("home.json")
+fetch("./data/home.json")
   .then((res) => res.json())
   .then((data) => {
     document.getElementById("name").textContent = data.name;
@@ -54,7 +54,7 @@ fetch("home.json")
     //   card.appendChild(img);
     //   card.appendChild(desc);
 
-    //   link.appendChild(card);  
+    //   link.appendChild(card);
 
     //   postsContainer.appendChild(link);
     // });
