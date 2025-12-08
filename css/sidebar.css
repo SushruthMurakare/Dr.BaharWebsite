@@ -23,6 +23,12 @@
     z-index: 1000;
 }
 
+@media (max-width: 760px) {
+  .sidebar {
+    display: none;
+  }
+}
+
 /* Profile Section */
 .profile-section {
     padding: 16px 20px;
@@ -136,6 +142,33 @@ hr {
 
 .contact-link:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 770px) {
+  .contact-links {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: var(--primary-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+  }
+
+  .contact-link {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .main-content {
+    padding-bottom: 80px;
+  }
 }
 
 /* Focus States for Accessibility */
