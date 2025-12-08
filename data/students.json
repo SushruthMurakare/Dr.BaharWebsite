@@ -9,7 +9,7 @@
     },
     {
       "name": "Tanmay Desai",
-      "graduation": "May 2027",
+      "graduation": "Spring 2027",
       "program": "PhD Student in Robotics",
       "about": "My work involves Motion Planning and how we can utilize different hardware accelerators (Hardware Software Co-Design) can be utilized to achieve real time and energy efficient performance.",
       "image": "./assets/students/Tanmay.jpeg"
