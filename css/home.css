@@ -39,6 +39,15 @@ body {
 .logo-link {
   display: flex;
   align-items: center;
+  text-decoration: none;
+}
+
+.cs-mines {
+  text-decoration: none;
+  background-color: #21314d;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .university-logo {
