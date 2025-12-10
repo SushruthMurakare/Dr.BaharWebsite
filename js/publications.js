@@ -67,6 +67,10 @@ function normalizeWork(w) {
   } else if (w['contributors'] && Array.isArray(w.contributors)) {
     authors = w.contributors.map(c => c.name || c['creditName'] || '').filter(Boolean).join(', ');
   }
+  
+  if (authors == 'Greenstein, Shane, Bahar, R. Iris') {
+    return '';
+  }
 
   // Date: try different ORCID fields
   let date = w.date || w.publication_date || w.year || w.displayDate || '';
